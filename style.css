@@ -301,7 +301,7 @@ select {
   background: white;
   color: #2c3e50;
   cursor: pointer;
-  min-width: 140px;
+  min-width: 175px;
 }
 
 /* Team Stats */
@@ -380,5 +380,123 @@ select {
 
   .teams-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Added for the LevelUps ---------- */
+
+/* Error message (the success one is above) */
+.error-message {
+  background-color: #fdecea;
+  color: #8a1c14;
+}
+
+/* Celebration banner */
+.celebration {
+  display: none;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #fff4d6;
+  color: #7a5200;
+  border: 2px solid #f5c542;
+}
+
+/* Attendee list */
+.attendee-section {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #f1f5f9;
+  text-align: left;
+}
+
+.attendee-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.attendee-header h3 {
+  color: #64748b;
+  font-size: 16px;
+}
+
+.clear-btn {
+  width: auto;
+  min-width: 0;
+  height: auto;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: transparent;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+  box-shadow: none;
+}
+
+.clear-btn:hover {
+  background-color: #f1f5f9;
+  color: #334155;
+  transform: none;
+  box-shadow: none;
+}
+
+.empty-message {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 15px;
+  padding: 10px 0;
+}
+
+.attendee-list {
+  list-style: none;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.attendee-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background-color: #f8fafc;
+  border-radius: 10px;
+}
+
+.attendee-name {
+  font-weight: 500;
+  color: #2c3e50;
+  overflow-wrap: anywhere;
+}
+
+.team-badge {
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: #475569;
+}
+
+.team-badge.water {
+  background-color: #e8f7fc;
+}
+.team-badge.zero {
+  background-color: #ecfdf3;
+}
+.team-badge.power {
+  background-color: #fff7ed;
+}
+
+@media (max-width: 768px) {
+  .attendee-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 }

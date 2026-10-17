@@ -28,15 +28,26 @@
     <div class="attendance-tracker">
       <div class="attendance-header">
         <i class="fas fa-users"></i>
-        Attendance: <span id="attendeeCount">0</span>/50
+        Attendance: <span id="attendeeCount">0</span>/<span id="goalCount">50</span>
       </div>
       <div class="progress-container">
-        <div id="progressBar" class="progress-bar"></div>
+        <div
+          id="progressBar"
+          class="progress-bar"
+          role="progressbar"
+          aria-label="Attendance progress"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        ></div>
       </div>
     </div>
     <div class="container">
+      <!-- Celebration message (shows when the goal is reached) -->
+      <p id="celebration" class="celebration"></p>
+
       <!-- Feedback message -->
-      <p id="greeting"></p>
+      <p id="greeting" aria-live="polite"></p>
 
       <!-- Check-in form -->
       <form class="check-in" id="checkInForm">
@@ -81,10 +92,22 @@
           </div>
         </div>
       </div>
+
+      <!-- Attendee list -->
+      <div class="attendee-section">
+        <div class="attendee-header">
+          <h3>Attendee List</h3>
+          <button type="button" id="clearBtn" class="clear-btn">Clear all</button>
+        </div>
+        <p id="emptyMessage" class="empty-message">
+          No one has checked in yet.
+        </p>
+        <ul id="attendeeList" class="attendee-list"></ul>
+      </div>
     </div>
 
     <footer class="footer">
-      &copy; 2025 Intel •
+      &copy; 2026 Intel •
       <a
         href="https://www.intel.com/content/www/us/en/corporate-responsibility/2030-goals.html"
         class="footer-link"
